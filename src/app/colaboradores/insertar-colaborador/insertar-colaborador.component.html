@@ -1,0 +1,43 @@
+<div class="container" np-app="myapp" ng-controller="miControlador">
+	<h3>Alta de colaborador</h3>
+	<br>
+	<fieldset>
+		<legend>Datos Personales</legend>
+		<form #formulario="ngForm" (submit)="insertarColaborador(formulario)">
+			<div class="row" ng-app="insertform" ng-controller="insertcontroller">
+				<div class="form-group col-md-5">
+					<label for="name">Nombre</label> <input type="text"
+						class="form-control" required ngModel name="name">
+				</div>
+				<div class="col-md-1"></div>
+				<div class="form-group col-md-5">
+					<label for="ext">Extensión</label> <input type="text"
+						class="form-control" ngModel name="ext" required>
+				</div>
+			</div>
+			<div class="row">
+				<div class="form-group col-md-5">
+					<label for="codemple">Cod. Empleado</label> <input type="text"
+						class="form-control" ngModel name="codemple" required>
+				</div>
+				<div class="col-md-1"></div>
+				<div class="form-group col-md-5">
+					<label for="mail">Correo</label> <input type="text"
+						class="form-control" ngModel name="mail">
+				</div>
+			</div>
+			<br> <br>
+			<div class="row">
+				<div class="form-group col-md-3"></div>
+				<div class="form-group col-md-3">
+					<input type="submit" class="btn btn-success" style="width: 100px;" value="Enviar">
+				</div>
+				<div class="form-group col-md-1"></div>
+				<div class="form-group col-md-4">
+					<input type="reset" class="btn btn-danger" style="width: 100px;" value="Cancelar">
+				</div>
+			</div>
+		</form>
+	</fieldset>
+</div>
+

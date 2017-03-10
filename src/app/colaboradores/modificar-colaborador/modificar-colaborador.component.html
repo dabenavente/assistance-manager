@@ -1,0 +1,71 @@
+<div class="container" np-app="myapp" ng-controller="miControlador">
+	<h3>Modificar colaborador</h3>
+	<br>
+	<div class="row">
+		<div class="col-md-5">
+			<div class="row">
+				<legend>Buscar empleado</legend>
+	 			<form #formulario="ngForm"> 
+					<div class="form-group col-md-6">
+						<label for="name">Nombre</label> <input type="text"
+						class="form-control" required ngModel name="name">
+	 				</div>
+	 				<div class="col-md-2"></div>
+	 				<div class="form-group col-md-3">
+	 					<input type="submit" class="btn btn-success" style="width: 100px;" value="Buscar">
+	 				</div> 
+	 			</form>
+			</div>
+			<br>
+			<div class="row">
+				<legend>Empleados encontrados</legend>
+				<div class="list-group">
+				  <a href="#" class="list-group-item">Empleado1</a>
+				  <a href="#" class="list-group-item">Empleado2</a>
+				  <a href="#" class="list-group-item">Empleado3</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-2"></div>
+		<div class="col-md-5">
+			<legend>Datos Personales</legend>
+			<form #formulario="ngForm" (submit)="modificarColaborador(formulario)>
+				<div class="row" ng-app="insertform" ng-controller="insertcontroller">
+					<div class="form-group col-md-5">
+						<label for="name">Nombre</label> <input type="text"
+							class="form-control" required ngModel name="name">
+					</div>
+					<div class="col-md-1"></div>
+					<div class="form-group col-md-5">
+						<label for="ext">Extensión</label> <input type="text"
+							class="form-control" ngModel name="ext" required>
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group col-md-5">
+						<label for="codemple">Cod. Empleado</label> <input type="text"
+							class="form-control" ngModel name="codemple" required>
+					</div>
+					<div class="col-md-1"></div>
+					<div class="form-group col-md-5">
+						<label for="mail">Correo</label> <input type="text"
+							class="form-control" ngModel name="mail">
+					</div>
+				</div>
+				<br> <br>
+				<div class="row">
+					<div class="form-group col-md-4"></div>
+					<div class="form-group col-md-3">
+						<input type="submit" class="btn btn-success" style="width: 100px;" value="Guardar">
+					</div>
+					<div class="form-group col-md-1"></div>
+					<div class="form-group col-md-3">
+						<input type="reset" class="btn btn-danger" style="width: 100px;" value="Cancelar">
+					</div>
+					<div class="form-group col-md-1"></div>
+				</div>
+			</form>
+		</div>		
+	</div>
+</div>
+
